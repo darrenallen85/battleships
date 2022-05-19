@@ -29,5 +29,5 @@ jobs:
           mv ./art /usr/local/bin/art
       - name: Configure art
         run: |
-          art configure --key ${{ secrets.dev_ART_KEY }} --secret ${{ secrets.dev_ART_SECRET }}
+          art configure --key ${{ secrets.ART_KEY }} --secret ${{ secrets.ART_SECRET }}
           art app deploy -f .art/external.yaml --set argonaut.env="dev"  --set argonaut.region="us-east-2"  --set argonaut.cluster="dev"  --set argonaut.serviceType="external"
